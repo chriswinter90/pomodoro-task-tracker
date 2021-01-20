@@ -64,7 +64,7 @@ const createTimeLeft = () => {
   return {
     subscribe,
     set,
-    decrement: () => update(n => n - 1000),
+    decrement: () => update(n => n - 1),
   }
 }
 

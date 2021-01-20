@@ -65,10 +65,11 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: min-content 1fr min-content min-content;
+    grid-row-gap: 5px;
 
     button {
-      margin: 5px 30%;
+      margin: 0 30%;
       min-height: 30px;
     }
   }

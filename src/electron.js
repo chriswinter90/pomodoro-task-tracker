@@ -13,7 +13,7 @@ const createWindow = () => {
     },
   });
 
-  win.removeMenu();
+  if (isProduction) win.removeMenu();
 
   const url = isProduction ? `file://${path.join(__dirname, '../public/index.html')}` : 'http://localhost:8080';
 
@@ -24,8 +24,8 @@ const createWindow = () => {
 app.on('ready', createWindow);
 
 app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") app.quit()
+  if (process.platform !== "darwin") app.quit();
 })
 app.on("activate", () => {
-  if (mainWindow === null) createWindow()
+  if (mainWindow === null) createWindow();
 })
